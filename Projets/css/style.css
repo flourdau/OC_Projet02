@@ -34,8 +34,8 @@ ol, ul {list-style:none}
 /*
     BODY        */
 body {
-    padding:44px 55px
-    /* padding:44px 0px */ /* DEBUG */
+    padding:0 55px
+    /* padding:0 */ /* DEBUG */
 }
 
 #contener {
@@ -53,30 +53,43 @@ body {
 }
 
 #logo {
+    padding:44px 0 0 0;
     width:61.09px;
-    height:19px
+    height:20px
 }
 
-#menu {
+#menu ul{
+    height:50px;
+    display:flex;
+    flex-direction:row;
+}
+
+#menu li {
+    padding:48px 0 0 0;
+    margin:0 0 0 67px
+}
+
+#menu a {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: #0065FC;
-}
-
-#menu a {
+    color: #000000;
     text-decoration: none;
-    margin:0 0 0 67px
 }
 
 #menu a:hover {
+    color: #0065FC;
     text-decoration:underline
 }
 
-h1 {
+#menu>ul>li:hover {
+    border-top: 2px solid #0065FC;
+}
+
+h2 {
     font-family: 'Raleway';
     font-style: normal;
     font-weight:700;
@@ -88,7 +101,7 @@ h1 {
     text-align: left;
 }
 
-h2 {
+h3 {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -228,6 +241,14 @@ FILTRES     */
     padding: 4px 20px;
 }
 
+.btnFilter:hover {
+    background:#DEEBFF;
+}
+
+.btnFilter>a:hover {
+    margin: 0 40px 0 0; /* Je n'ai pas trouvé l'info dans figma */
+}
+
 
 /* Contener icon */
 .btnFilter>a>span:first-child {
@@ -260,28 +281,27 @@ FILTRES     */
 
 /*
     Information */
-header>p {
+header>h4 {
     display: flex;
     flex-flow: row;
-justify-content: left;
-align-items: center;
+    justify-content: left;
+    align-items: center;
     width: 447px;
-height: 24px;
+    height: 24px;
 }
 
-header>p>span:first-child {
-display: flex;
-justify-content: center;
-align-items: center;
+header>h4>span:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
     box-sizing: border-box;
     border-radius:100%;
     border: 1px solid #D9D9D9
-
 }
 
-header>p>span:last-child  {
+header>h4>span:last-child  {
     margin:0 0 0 11px;
     font-family: 'Raleway';
     font-style: normal;
