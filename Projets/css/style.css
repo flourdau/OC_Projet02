@@ -44,9 +44,15 @@ body {padding:0}
 
 
 /*
-    BODY        */
-body {padding:0 55px
+    BUGS    */ 
+/* Bouton Animaux */
+#search>section:last-child>ul>li:last-child>a>span:last-child{
+    min-width:160px;
 }
+
+/*
+    BODY        */
+body {padding:0 50px}
 
 #container {
     display:flex;
@@ -137,7 +143,7 @@ h3 {
 #search>section:first-child>div {
     height:49px;
     display:flex;
-    flex-flow:row wrap;
+    flex-flow:row nowrap;
     justify-content:center;
     align-items:center;
     margin:0 0 32px 0
@@ -151,7 +157,7 @@ h3 {
     align-items:center
 }
 
-#search>section:first-child span {
+#search>section:first-child>div>div span {
     height:49px;
     width:50px;
     display:flex;
@@ -207,9 +213,7 @@ FILTRES     */
     margin:0 0 38px 0
 }
 
-#search>section:last-child li  {
-    margin:0 40px 0 0 /* Je n'ai pas trouver l'info dans figma.... */
-}
+#search>section:last-child li  {margin:0 43px 0 0}
 
 #search>section:last-child>span {
     margin:0 32px 0 0;
@@ -234,7 +238,7 @@ FILTRES     */
 
 .btnFilter {
     display:flex;
-    flex-direction:row;
+    flex-flow:row wrap;
     align-items:center;
     border:2px solid #D9D9D9;
     box-sizing:border-box;
@@ -244,7 +248,7 @@ FILTRES     */
 
 .btnFilter>a {
     display: flex;
-    flex-direction: row;
+    flex-flow:row nowrap;
     padding:4px 20px
 }
 
@@ -310,9 +314,9 @@ header>h4>span:last-child  {
     line-height:19px
 }
 
+
 /*
     MAIN    */
-
 main {
     margin:39px 0 0 0;
     border-radius:0
@@ -336,7 +340,7 @@ main>section {
 #populaires h2 {margin:0 0 26px 0}
 
 /*
-    MAIN COLONNE 1 */
+    COLONNE 1 = HEBERGEMENTS */
 #hebergements {
     flex:3;
     margin:0 40px 0 0;
@@ -357,16 +361,20 @@ main>section {
 #hebergements>section {
     display:flex;
     flex-flow:row wrap;
-    justify-content:space-between;
+    /* justify-content:space-between; */
     align-items:center
+}
+
+#hebergements>section>a {
 }
 
 /*  CARD = HERBERGEMENT */
 .card {
+    flex:1 0 22%;
     margin:0 31px 30px 0;
     text-decoration:none;
     display:block;
-    width:246px;
+    min-width:246px;
     height:199px;
     border-radius:20px;
     background:white;
@@ -383,11 +391,14 @@ main>section {
 }
 .card h4 {
     height:15px;
+    word-wrap: normal;
+    word-break: normal;
     padding:0 26px 9px 16px
 }
 
 .card h4,
 .card2 h4 {
+    word-break:normal;
     font-family:'Raleway';
     font-style:normal;
     font-weight:700;
@@ -572,15 +583,65 @@ footer>ul>li:first-child a {
 footer>ul {margin:0 250px 0 0}
 
 /*
-    TABLETTE    */
+TABLETTE    */
 @media screen and (max-width: 992px) {
+
     body {
+        padding:0 72px;
         /* background:green; */
     }
+
+    /* Marge filter */
+    #search>section:last-child li {margin:0 22px 0 0}
+
+    /* Herbergements & Populaires */
+    main>section {
+        flex-flow:column nowrap
+    }
+
+    #hebergements {
+        margin:0 0 53px 0
+    }
+
+    #hebergements>section {
+        justify-content:space-between
+    }
+
+    .card {
+        margin:0 31px 30px 0;
+        min-width:216px
+    }
+
+    #populaires{
+        max-width:100%;
+    }
+
+    #populaires>section {
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:center;
+    }
+
+    .card2 {
+        margin:0 23px 48px 0;
+        width:220px;
+    }
+
 }
 /*
-    SMARTPHONE    */
+SMARTPHONE    */
 @media screen and (max-width: 768px) {
     body {
     }
+    main>section {
+        display:flex;
+        flex-flow:column-reverse nowrap
+    }
+    #search>section:first-child button {
+        width:50px;
+    }
+    #search>section:first-child button i {display:inline}
+    #search>section:first-child button span {display:none}
+
+
 }
