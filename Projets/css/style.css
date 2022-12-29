@@ -45,9 +45,12 @@ body {padding:0}
 
 /*
     BODY        */
-body {padding:0 55px}
+body {padding:0 55px
+}
 
 #container {
+    display:flex;
+    flex-flow:column;
     max-width:1400px;
     margin:auto
 }
@@ -311,7 +314,6 @@ header>h4>span:last-child  {
     MAIN    */
 
 main {
-    height:626px;
     margin:39px 0 0 0;
     border-radius:0
 }
@@ -447,7 +449,7 @@ main>section {
 
 
 /*
-    CARD2 = ACTIVITY    */
+    CARD2 = POPULAIRES    */
 .card2 {
     margin:0 0 33px 0;
     border-radius:20px;
@@ -493,4 +495,92 @@ main>section {
 .card2 span {
     border-radius:0px;
     margin:0 26px 9px 0
+}
+
+
+/*
+    BLOC ACTIVITY   */
+#activites h2 {
+    margin:60px 0 0 0;
+}
+
+#activites>section {
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+    justify-content:space-between
+}
+
+/*
+    CARD 3 = ACTIVITY   */
+.card3 img {
+    object-fit:cover;
+    box-sizing:border-box;
+    height:445px;
+    max-width:302px;
+    border-radius:20px 20px 0 0
+}
+
+.card3 {
+    margin:19px 43px 61px 0;
+    text-decoration:none;
+    background:#FFFFFF;
+    border:1px solid #D9D9D9;
+    border-radius:20px;
+    box-shadow:0px 3px 15px rgba(0, 0, 0, .1);
+}
+
+.card3 p {
+    margin:20px 36px 21px 19px;
+    font-family:'Raleway';
+    font-style:normal;
+    font-weight:700;
+    font-size:16px;
+    line-height:19px;
+    color: #000000
+}
+
+
+/*
+    FOOTER  */
+footer {
+    display:flex;
+    flex-flow: row wrap;
+    background:#F2F2F2;
+    padding:45px 70px 58px 70px;
+}
+
+footer a {
+    display: inline-block;
+    text-decoration:none;
+    margin:0 0 12px 0;
+    font-family:'Raleway';
+    font-style:normal;
+    font-weight:400;
+    font-size:16px;
+    line-height:19px;
+    color: #000000
+}
+
+footer>ul>li:first-child a {
+    margin:0 0 20px 0;
+    font-weight:700;
+    font-size:18px;
+    line-height:21px
+}
+
+footer>ul {margin:0 250px 0 0}
+
+/*
+    TABLETTE    */
+@media screen and (max-width: 992px) {
+    body {
+        /* background:green; */
+    }
+}
+/*
+    SMARTPHONE    */
+@media screen and (max-width: 768px) {
+    body {
+    }
 }
