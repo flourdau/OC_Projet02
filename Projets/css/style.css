@@ -448,6 +448,7 @@ COLONNE 1 = HEBERGEMENTS */
     object-fit:cover;
     height:144px;
     width:37%;
+    min-width:137px;
     border:5px solid #FFFFFF;
     border-radius: 20px 0px 0px 20px;
     box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
@@ -558,12 +559,10 @@ footer>ul>li:first-child a {
 
 footer>ul {margin:0 250px 0 0}
 
-/*
-TABLETTE    */
 
 /*
 TABLETTE    */
-@media screen and (max-width: 992px) {
+@media screen and (max-width:992px) {
 
     body {padding:0 20px}
     
@@ -586,7 +585,7 @@ TABLETTE    */
         display:flex;
         flex-flow:column nowrap;
         justify-content:left;
-        align-items: flex-start;
+        align-items:flex-start;
         width:92%
     }
 
@@ -604,7 +603,7 @@ TABLETTE    */
         box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
     }
 
-    .card2 img {width:96px}
+    .card2 img {min-width:96px}
 
     .card2 h4 {
         margin:0 0 7px 0;
@@ -650,11 +649,11 @@ TABLETTE    */
 
 /*
 SMARTPHONE    */
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
 
     body {padding:0 10px}
     body {
-        background:silver;
+        background:GREEN;
     }
 
     /*
@@ -699,6 +698,7 @@ SMARTPHONE    */
 
     h3 {margin:0 0 37px 0}
 
+
     /*
     SEARCH      */
     #search>form>div>div{width:100%}
@@ -715,26 +715,20 @@ SMARTPHONE    */
     /*
     FILTRES     */
     #filters {flex-flow:row wrap}
-
-    #filters>span {margin:0 24px 15px 0}
-
-    #filters ul{
-        flex-flow:row wrap;
-        align-items:center;
-        justify-content:center
-    }
-
+    /* Marge filter */
     #filters li {margin:0 14px 17px 0}
 
+    #filters>span:first-child {margin:0 0 15px 0}
+
+    #filters>span:last-child {margin:0 24px 15px 0}
+
+    #filters ul {
+        flex-flow:row wrap;
+        align-items:center;
+        justify-content:space-around
+    }
+
     .btnFilter {width:160px}
-
-    .btnFilter>a {padding:4px 20px}
-
-    /* Contener icon */
-    .btnFilter>a>span:first-child {width:20px}
-
-    /* Icone */
-    .btnFilter i {width:19px}
 
     /* Text */
     .btnFilter>a>span:last-child {
@@ -742,109 +736,91 @@ SMARTPHONE    */
         line-height:13px
     }
 
+    #filters li {margin:0 0px 17px 0    }
+
     /* Corrections Bouton Animaux */
     #filters>ul>li:last-child>a>span:last-child{min-width:100px}
 
 
     /*
     INFORMATIONS */
-    #info {margin:20px 0 20px 0}
+    #info {margin:20px 0 14px 0}
 
 
     /*
     MAIN */
+    /* Herbergements & Populaires */
     main>section:first-child {
         display:flex;
-        flex-flow:column-reverse nowrap
-}
+        flex-flow:column-reverse nowrap;
+        /* align-items:center */
+    }
 
 
+    /* 
+    MAIN COLONNE 2 */
+    #populaires {
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content:left;
+        align-items:flex-start;
+        /* width:80% */
+    }
+    
+    #populaires>section {
+        width:100%;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:center
+    }
 
+    #populaires>section a {width:100%}
 
-/* 
-MAIN COLONNE 2 */
-/* #populaires {
-    display:flex;
-    flex-flow:column;
-    align-items:center;
-    padding:40px 42px 1px 42px
-} */
+    .card2 img {width:137px}
 
-#populaires>section {
-    width:90%;
-    display:flex;
-    flex-flow:column wrap;
-    justify-content:left
-}
+    #populaires>div:first-child {
+        display:flex;
+        flex-flow:row;
+        width:100%;
+        justify-content:space-between;
+        align-items:center
+    }
 
-#populaires>section a {
-    width:100%;
-}
+    #populaires>div:first-child i {
+        width:18px;
+        height:16px
+    }
 
-#populaires>div:first-child {
-    display:flex;
-    flex-flow:row;
-    width:100%;
-    justify-content:space-between;
-    align-items:center
-}
+    .card2 {
+        margin:0 0 10px 0;
+        max-width:100%;
+        min-width:334px;
+        box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
+    }
 
-#populaires>div:first-child i {
-    width:18px;
-    height:16px
-}
+    /* Marge bottom last article */
+    #populaires>section>a:last-child {margin:0 0 47px 0}
 
+    .card2 img {min-width:137px}
 
-/*
-    CARD2 = POPULAIRES    */
-.card2 {
-    margin:0 0 33px 0;
-    border-radius:20px;
-    text-decoration:none;
-    display:flex;
-    background:white;
-    width:343px;
-    height:144px;
-    box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
-}
+    .card2 h4 {
+        margin:0 0 7px 0;
+        font-weight:700;
+        font-size:16px;
+        line-height:19px
+    }
 
-.card2 img {
-    box-sizing:border-box;
-    object-fit:cover;
-    height:144px;
-    width:37%;
-    border:5px solid #FFFFFF;
-    border-radius: 20px 0px 0px 20px;
-    box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
-}
+    .card2 article {
+        padding:12px 5px 0 10px;
+        width:100%
+    }
 
-.card2>div {display:flex}
+    .card2 p {
+        font-weight:400;
+        font-size:14px;
+        line-height:16px
+    }
 
-.card2 h4 {margin:0 0 7px 0}
-
-.card2 article {
-    padding:16px 22px 0 15px;
-    width:63%;
-    display:flex;
-    flex-flow:column;
-    justify-content:space-between
-}
-
-.card2 p {
-    font-family:'Raleway';
-    font-style:normal;
-    font-weight:400;
-    font-size:14px;
-    line-height:16px;
-    color:#000000
-}
-
-.card2 span {
-    display:block;
-    height:12px;
-    border-radius:0px;
-    margin:0 26px 12px 0
-}
-
+    .card2 span {margin:0 26px 9px 0}
 
 }
