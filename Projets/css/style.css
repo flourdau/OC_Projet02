@@ -43,8 +43,8 @@ body {padding:0 50px}
 #container {
     display:flex;
     flex-flow:column;
-    justify-content:space-between;
-    align-items:stretch;
+    /* justify-content:left;
+    align-items:stretch; */
     max-width:1400px;
     margin:auto
 }
@@ -294,13 +294,15 @@ FILTRES     */
 /*
     MAIN    */
 main {
+    width:98%;
     margin:39px 0 0 0;
     border-radius:0
 }
 
 main>section:first-child {
+    width:100%;
     display:flex;
-    /* flex-flow:row nowrap */
+    flex-flow:row;
 }
 
 #populaires, 
@@ -317,7 +319,7 @@ main>section:first-child {
 /*
 COLONNE 1 = HEBERGEMENTS */
 #hebergements {
-    width:880px;
+    max-width:880px;
     flex:3;
     margin:0 40px 0 0;
     padding:42px 10px 46px 40px
@@ -410,6 +412,8 @@ COLONNE 1 = HEBERGEMENTS */
 /* 
     MAIN COLONNE 2 */
 #populaires {
+
+    width:100%;
     display:flex;
     flex-flow:column;
     align-items:center;
@@ -438,7 +442,7 @@ COLONNE 1 = HEBERGEMENTS */
     text-decoration:none;
     display:flex;
     background:white;
-    width:343px;
+    min-width:343px;
     height:144px;
     box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
 }
@@ -447,8 +451,7 @@ COLONNE 1 = HEBERGEMENTS */
     box-sizing:border-box;
     object-fit:cover;
     height:144px;
-    width:37%;
-    min-width:137px;
+    min-width:37%;
     border:5px solid #FFFFFF;
     border-radius: 20px 0px 0px 20px;
     box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
@@ -460,7 +463,7 @@ COLONNE 1 = HEBERGEMENTS */
 
 .card2 article {
     padding:16px 22px 0 15px;
-    width:63%;
+    min-width:63%;
     display:flex;
     flex-flow:column;
     justify-content:space-between
@@ -572,7 +575,7 @@ TABLETTE    */
     /* Herbergements & Populaires */
     main>section:first-child {flex-flow:column nowrap}
 
-    #hebergements {margin:0 0 53px 0    }
+    #hebergements {margin:0 0 53px 0}
 
     #hebergements>section {justify-content:space-between}
 
@@ -582,38 +585,55 @@ TABLETTE    */
     }
 
     #populaires{
+        width:96%;
         display:flex;
         flex-flow:column nowrap;
-        justify-content:left;
         align-items:flex-start;
-        width:92%
+        /* padding:40px 10px 0 0  */
+    }
+
+    #populaires>div {
+        background: RED;
+        margin:0 50px 0 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #populaires>div>h2 {
+        background:GREEN;
     }
 
     #populaires>section {
+        width:100%;
         display:flex;
         flex-flow:row nowrap;
         justify-content:left
     }
 
-    #populaires {padding:34px 40px 0 40px}
 
     .card2 {
-        margin:0 23px 48px 0;
-        width:252px;
+        margin:0 31px 48px 0;
+        min-width:252px;
         box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
     }
 
-    .card2 img {min-width:96px}
+    .card2 img {min-width:106px}
 
     .card2 h4 {
-        margin:0 0 7px 0;
-        font-size: 14px;
-        line-height: 16px
+        padding:0 10px 0 0;
+        margin:0;
+        font-size:14px;
+        line-height:16px
+    }
+
+    #populaires>div>i {
+        margin:0 50px 0 0
     }
 
     .card2 article {
         padding:12px 5px 0 10px;
-        width:100%
+        min-width:none
     }
 
     .card2 p {
@@ -650,18 +670,18 @@ TABLETTE    */
 /*
 SMARTPHONE    */
 @media screen and (max-width:768px) {
-
-    body {padding:0 10px}
-    body {
-        background:GREEN;
-    }
+    body{padding:0 5px}
+    /* #container{padding:0 20px} */
 
     /*
     HEARDER     */
+    header {width:100%}
+
     #header-top {
+        width:100%;
         margin:0 0 31px 0;
         flex-direction:column;
-        align-items:center
+        align-items:center;
     }
 
     #logo {padding:21px 0 42px 0}
@@ -674,13 +694,12 @@ SMARTPHONE    */
 
     #menu ul{
         width:100%;
-        display:flex;
         flex-flow:row wrap;
         justify-content:space-around
     }
 
     #menu li {
-        width: 50%;
+        width:50%;
         display:flex;
         flex-flow:row wrap;
         align-items:center;
@@ -701,6 +720,7 @@ SMARTPHONE    */
 
     /*
     SEARCH      */
+    #search{width:100%}
     #search>form>div>div{width:100%}
 
     #search>form input[type="text"] {width:100%}
@@ -744,44 +764,45 @@ SMARTPHONE    */
 
     /*
     INFORMATIONS */
-    #info {margin:20px 0 14px 0}
+    #info {
+        width:100%;
+        margin:20px 0 14px 0
+    }
 
 
     /*
     MAIN */
     /* Herbergements & Populaires */
+    main {width:auto}
+
     main>section:first-child {
+        width:auto;
         display:flex;
-        flex-flow:column-reverse nowrap;
-        /* align-items:center */
+        flex-flow:column-reverse wrap;
+        align-items: flex-start;
     }
 
 
     /* 
     MAIN COLONNE 2 */
     #populaires {
+        flex:none;
         display:flex;
-        flex-flow:column nowrap;
-        justify-content:left;
-        align-items:flex-start;
-        /* width:80% */
+        flex-flow:column wrap;
+        align-items:center
     }
     
     #populaires>section {
-        width:100%;
         display:flex;
         flex-flow:column wrap;
         justify-content:center
     }
 
     #populaires>section a {width:100%}
-
-    .card2 img {width:137px}
-
+    
     #populaires>div:first-child {
         display:flex;
         flex-flow:row;
-        width:100%;
         justify-content:space-between;
         align-items:center
     }
@@ -793,8 +814,6 @@ SMARTPHONE    */
 
     .card2 {
         margin:0 0 10px 0;
-        max-width:100%;
-        min-width:334px;
         box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
     }
 
@@ -810,10 +829,7 @@ SMARTPHONE    */
         line-height:19px
     }
 
-    .card2 article {
-        padding:12px 5px 0 10px;
-        width:100%
-    }
+    .card2 article {padding:12px 5px 0 10px}
 
     .card2 p {
         font-weight:400;
@@ -826,11 +842,17 @@ SMARTPHONE    */
 
     /*
     HEBERGEMENTS */
+    #hebergements {padding:34px 10px 0 10px}
+
     #hebergements {
-        width:100%;
-        flex:none;
+        margin:0;
+        padding:30px 10px 0 10px;
         background:none;
-        padding:30px 10px 0 40px
+        max-width:none;
+        width:98%;
+        flex:none;
+        flex-flow: column;
+        align-items:stretch;
     }
 
     #hebergements h2 {margin:0 0 19px 0}
@@ -839,13 +861,66 @@ SMARTPHONE    */
         display:flex;
         flex-flow:column nowrap
     }
-
+    
     .card {
+        width:100%;
         flex:none;
-        margin:0 31px 12px 0;
-        min-width:100%
+        margin:0 0 12px 0;
     }
 
     #hebergements>a {display:none}
+
+
+    /*
+    BLOC ACTIVITY   */
+    #activites h2 {margin:105px 150px 5px 0}
+
+    #activites>section {
+        max-width:100%;
+        width:100%;
+        flex-flow:column wrap
+    }
+
+    /*
+    CARD 3 = ACTIVITY   */
+    .card3 {
+        width:100%;
+        height:190px;
+        margin:0 0 19px 0
+    }
+
+    #activites .card3:last-child {margin:19px 0px 0 0}
+
+    .card3>img {
+        position:relative;
+        height:134px;
+        width:100%
+    }
+
+    .card3 h4 {padding:0 19px 0 21px}
+
+
+    /*
+    FOOTER  */
+    footer {
+        width: 98%;
+        flex-flow:column nowrap;
+        padding:0 0 61px 30px
+    }
+
+    footer>ul>li:first-child a {
+        /* margin:45px 0 20px 0; */
+        font-weight:700;
+        font-size:18px;
+        line-height:21px
+    }
+
+    footer>ul {margin:0 0 0 0}
+
+
+
+
+
+
 
 }
