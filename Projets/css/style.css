@@ -300,7 +300,7 @@ main {
 
 main>section:first-child {
     display:flex;
-    flex-flow:row nowrap
+    /* flex-flow:row nowrap */
 }
 
 #populaires, 
@@ -822,5 +822,30 @@ SMARTPHONE    */
     }
 
     .card2 span {margin:0 26px 9px 0}
+
+
+    /*
+    HEBERGEMENTS */
+    #hebergements {
+        width:100%;
+        flex:none;
+        background:none;
+        padding:30px 10px 0 40px
+    }
+
+    #hebergements h2 {margin:0 0 19px 0}
+
+    #hebergements>section {
+        display:flex;
+        flex-flow:column nowrap
+    }
+
+    .card {
+        flex:none;
+        margin:0 31px 12px 0;
+        min-width:100%
+    }
+
+    #hebergements>a {display:none}
 
 }
