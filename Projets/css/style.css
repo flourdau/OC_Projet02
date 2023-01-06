@@ -7,6 +7,7 @@
 .color-BG-1   {background:#0065FC}
 .color-BG-2   {background:#DEEBFF}
 .color-BG-3   {background:#D9D9D9}
+.color-BG-4   {background:#F2F2F2}
 
 
 /*
@@ -43,8 +44,6 @@ body {padding:0 50px}
 #container {
     display:flex;
     flex-flow:column;
-    /* justify-content:left;
-    align-items:stretch; */
     max-width:1400px;
     margin:auto
 }
@@ -187,7 +186,7 @@ FILTRES     */
     display:flex;
     flex-flow:row nowrap;
     align-items:center;
-    justify-content:left;
+    justify-content:left
 }
 
 #filters li {margin:0 40px 0 0}
@@ -302,7 +301,7 @@ main {
 main>section:first-child {
     width:100%;
     display:flex;
-    flex-flow:row;
+    flex-flow:row
 }
 
 #populaires, 
@@ -313,8 +312,6 @@ main>section:first-child {
 
 #hebergements h2 {margin:0 0 23px 0}
 
-#populaires i,
-#populaires h2 {margin:0 0 26px 0}
 
 /*
 COLONNE 1 = HEBERGEMENTS */
@@ -371,8 +368,7 @@ COLONNE 1 = HEBERGEMENTS */
 .card h4,
 .card2 h4,
 .card3 h4 {
-    word-wrap: normal;
-    word-break: normal;
+    word-wrap:normal;
     word-break:normal;
     font-family:'Raleway';
     font-style:normal;
@@ -410,29 +406,30 @@ COLONNE 1 = HEBERGEMENTS */
 
 
 /* 
-    MAIN COLONNE 2 */
+MAIN COLONNE 2 */
 #populaires {
-
-    width:100%;
     display:flex;
     flex-flow:column;
     align-items:center;
-    padding:40px 42px 1px 42px
+    padding:40px 20px 1px 20px
+}
+
+#populaires>section {width:100%}
+
+#populaires>div:first-child i {
+    position:relative;
+    top:-5px
 }
 
 #populaires>div:first-child {
+    height:16px;
+    padding:0 0 26px 0;
     display:flex;
     flex-flow:row;
     width:100%;
     justify-content:space-between;
     align-items:center
 }
-
-#populaires>div:first-child i {
-    width:18px;
-    height:16px
-}
-
 
 /*
     CARD2 = POPULAIRES    */
@@ -538,7 +535,7 @@ footer {
     display:flex;
     flex-flow:row nowrap;
     background:#F2F2F2;
-    padding:0 70px 58px 70px;
+    padding:0 70px 58px 70px
 }
 
 footer a {
@@ -585,23 +582,17 @@ TABLETTE    */
     }
 
     #populaires{
-        width:96%;
-        display:flex;
         flex-flow:column nowrap;
-        align-items:flex-start;
-        /* padding:40px 10px 0 0  */
+        align-items:flex-start
     }
 
     #populaires>div {
-        background: RED;
-        margin:0 50px 0 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
+        display:flex;
+        flex-flow:row wrap
     }
-    #populaires>div>h2 {
-        background:GREEN;
+
+    #populaires>div>i {
+        margin:0 30px 0 0
     }
 
     #populaires>section {
@@ -610,7 +601,6 @@ TABLETTE    */
         flex-flow:row nowrap;
         justify-content:left
     }
-
 
     .card2 {
         margin:0 31px 48px 0;
@@ -625,10 +615,6 @@ TABLETTE    */
         margin:0;
         font-size:14px;
         line-height:16px
-    }
-
-    #populaires>div>i {
-        margin:0 50px 0 0
     }
 
     .card2 article {
@@ -671,7 +657,6 @@ TABLETTE    */
 SMARTPHONE    */
 @media screen and (max-width:768px) {
     body{padding:0 5px}
-    /* #container{padding:0 20px} */
 
     /*
     HEARDER     */
@@ -756,7 +741,7 @@ SMARTPHONE    */
         line-height:13px
     }
 
-    #filters li {margin:0 0px 17px 0    }
+    #filters li {margin:0 0px 17px 0}
 
     /* Corrections Bouton Animaux */
     #filters>ul>li:last-child>a>span:last-child{min-width:100px}
@@ -765,7 +750,7 @@ SMARTPHONE    */
     /*
     INFORMATIONS */
     #info {
-        width:100%;
+        width:auto;
         margin:20px 0 14px 0
     }
 
@@ -779,13 +764,16 @@ SMARTPHONE    */
         width:auto;
         display:flex;
         flex-flow:column-reverse wrap;
-        align-items: flex-start;
+        align-items:flex-start;
+        justify-content:flex-start
     }
 
 
     /* 
     MAIN COLONNE 2 */
     #populaires {
+        width:90%;
+        margin:auto;
         flex:none;
         display:flex;
         flex-flow:column wrap;
@@ -795,24 +783,25 @@ SMARTPHONE    */
     #populaires>section {
         display:flex;
         flex-flow:column wrap;
-        justify-content:center
-    }
-
-    #populaires>section a {width:100%}
-    
-    #populaires>div:first-child {
-        display:flex;
-        flex-flow:row;
-        justify-content:space-between;
+        justify-content:center;
         align-items:center
     }
 
-    #populaires>div:first-child i {
-        width:18px;
-        height:16px
+    #populaires>div:first-child {
+        vertical-align: middle;
+        display:flex;
+        flex-flow:row nowrap;
+        justify-content:space-between;
+        align-items:center
+        
     }
 
+    #populaires>div:first-child i {font-size:1.1em}
+    
     .card2 {
+        min-width:324px;
+        max-width:324px;
+        width:auto;
         margin:0 0 10px 0;
         box-shadow:0px 3px 15px rgba(0, 0, 0, 0.1)
     }
@@ -820,18 +809,33 @@ SMARTPHONE    */
     /* Marge bottom last article */
     #populaires>section>a:last-child {margin:0 0 47px 0}
 
-    .card2 img {min-width:137px}
+    .card2 img {
+        width:137px;
+        min-width:137px
+    }
 
     .card2 h4 {
-        margin:0 0 7px 0;
+        word-wrap:break-word;
+        word-break:normal;
         font-weight:700;
         font-size:16px;
         line-height:19px
     }
 
-    .card2 article {padding:12px 5px 0 10px}
+    .card2 article {width:auto}
+
+
+    .card2 article div {
+        word-wrap:break-word;
+        word-break:normal;
+        flex-flow:column wrap;
+        width:85%;
+        padding:0 15px 0 0
+    }
 
     .card2 p {
+        word-wrap:break-word;
+        word-break:normal;
         font-weight:400;
         font-size:14px;
         line-height:16px
@@ -842,30 +846,33 @@ SMARTPHONE    */
 
     /*
     HEBERGEMENTS */
-    #hebergements {padding:34px 10px 0 10px}
-
     #hebergements {
-        margin:0;
-        padding:30px 10px 0 10px;
         background:none;
-        max-width:none;
-        width:98%;
+        padding:34px 10px 0 10px;
+        margin:0;
+        padding:30px 0 0 0;
+        width:100%;
         flex:none;
-        flex-flow: column;
-        align-items:stretch;
+        flex-flow:column;
+        align-items:flex-start;
+        justify-content:flex-start
     }
 
-    #hebergements h2 {margin:0 0 19px 0}
+    #hebergements h2 {margin:0 0 19px 10px}
 
     #hebergements>section {
         display:flex;
-        flex-flow:column nowrap
+        flex-flow:column nowrap;
+        align-items:center;
+        justify-content:flex-start
     }
     
     .card {
+        max-width:335px;
+        min-width:335px;
         width:100%;
         flex:none;
-        margin:0 0 12px 0;
+        margin:0 0 12px 0
     }
 
     #hebergements>a {display:none}
@@ -873,18 +880,32 @@ SMARTPHONE    */
 
     /*
     BLOC ACTIVITY   */
-    #activites h2 {margin:105px 150px 5px 0}
+    #activites h2 {
+        width:50%;
+        margin:105px 150px 5px 10px
+    }
+
+    #activites {
+        width:100%;
+        display:flex;
+        flex-flow:column wrap;
+        align-items:center;
+        justify-content:flex-start
+    }
 
     #activites>section {
-        max-width:100%;
         width:100%;
-        flex-flow:column wrap
+        flex-flow:column wrap;
+        align-items:center;
+        justify-content:flex-start
     }
 
     /*
     CARD 3 = ACTIVITY   */
     .card3 {
-        width:100%;
+        max-width:335px;
+        min-width:335px;
+        width:98%;
         height:190px;
         margin:0 0 19px 0
     }
@@ -892,7 +913,6 @@ SMARTPHONE    */
     #activites .card3:last-child {margin:19px 0px 0 0}
 
     .card3>img {
-        position:relative;
         height:134px;
         width:100%
     }
@@ -903,24 +923,16 @@ SMARTPHONE    */
     /*
     FOOTER  */
     footer {
-        width: 98%;
+        width:90%;
         flex-flow:column nowrap;
         padding:0 0 61px 30px
     }
 
     footer>ul>li:first-child a {
-        /* margin:45px 0 20px 0; */
         font-weight:700;
         font-size:18px;
         line-height:21px
     }
 
     footer>ul {margin:0 0 0 0}
-
-
-
-
-
-
-
 }
