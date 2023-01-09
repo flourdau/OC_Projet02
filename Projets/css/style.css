@@ -269,8 +269,7 @@ FILTRES     */
 
 .btnFilter>a {
     display: flex;
-    flex-flow: row nowrap;
-    /* padding:4px 20px */
+    flex-flow: row nowrap
 }
 
 .btnFilter:hover {
@@ -392,7 +391,7 @@ COLONNE 1 = HEBERGEMENTS */
     color: #000000
 }
 
-#hebergements>section {
+#hebergements>div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -474,7 +473,7 @@ MAIN COLONNE 2 */
     padding: 42px 20px 1px 20px
 }
 
-#populaires>section {
+#populaires>div {
     width: 100%
 }
 
@@ -554,7 +553,7 @@ MAIN COLONNE 2 */
     margin: 60px 0 0 0
 }
 
-#activites>section {
+#activites>div {
     width: 100%;
     margin: 0 0 61px 0;
     display: flex;
@@ -672,7 +671,7 @@ TABLETTE    */
         margin: 0 30px 0 0
     }
 
-    #populaires>section {
+    #populaires>div:last-child {
         display: flex;
         flex-flow: row nowrap;
         justify-content: left
@@ -696,8 +695,7 @@ TABLETTE    */
     }
 
     .card2 article {
-        padding: 12px 5px 0 10px;
-        min-width: none
+        padding: 12px 5px 0 10px
     }
 
     .card2 p {
@@ -904,7 +902,7 @@ SMARTPHONE    */
         align-items: center
     }
 
-    #populaires>section {
+    #populaires>div:last-child {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
@@ -928,7 +926,7 @@ SMARTPHONE    */
     }
 
     /* Marge bottom last article */
-    #populaires>section>a:last-child {
+    #populaires>div:last-child>a:last-child {
         margin: 0 0 47px 0
     }
 
@@ -948,7 +946,6 @@ SMARTPHONE    */
     .card2 article {
         width: auto
     }
-
 
     .card2 article div {
         word-wrap: break-word;
@@ -987,7 +984,7 @@ SMARTPHONE    */
         margin: 0 0 19px 10px
     }
 
-    #hebergements>section {
+    #hebergements>div {
         width: 100%;
         flex-flow: column nowrap;
         align-items: center;
@@ -1020,7 +1017,7 @@ SMARTPHONE    */
         justify-content: flex-start
     }
 
-    #activites>section {
+    #activites>div {
         width: 100%;
         flex-flow: column wrap;
         align-items: center;
