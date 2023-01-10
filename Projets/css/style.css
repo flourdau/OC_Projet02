@@ -118,7 +118,7 @@ body {
 }
 
 #menu a {
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -136,8 +136,9 @@ body {
     border-top: 2px solid #0065FC
 }
 
-h2 {
-    font-family: 'Raleway', sans-serif;
+h2,
+h3 {
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -148,8 +149,9 @@ h2 {
     text-align: left
 }
 
-h3 {
-    font-family: 'Raleway';
+h4,
+h5 {
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -238,7 +240,7 @@ FILTRES     */
 #filters>span {
     margin: 0 32px 0 0;
     height: 21px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -294,7 +296,7 @@ FILTRES     */
     flex-flow: column nowrap;
     align-items: flex-start;
     padding: 10px 0px 10px 10px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
@@ -335,7 +337,7 @@ FILTRES     */
     display: flex;
     align-items: center;
     margin: 0 0 0 11px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -383,7 +385,7 @@ COLONNE 1 = HEBERGEMENTS */
 #hebergements>a {
     margin: 10px 0 0 0;
     text-decoration: none;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -420,6 +422,7 @@ COLONNE 1 = HEBERGEMENTS */
 }
 
 .card h4 {
+    margin: 0;
     height: 15px;
     padding: 0 26px 9px 16px
 }
@@ -429,13 +432,7 @@ COLONNE 1 = HEBERGEMENTS */
 .card3 h4 {
     word-wrap: normal;
     word-break: normal;
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    color: #000000;
-    letter-spacing: 0em;
     text-align: left
 }
 
@@ -444,7 +441,7 @@ COLONNE 1 = HEBERGEMENTS */
     width: 100%;
     height: 15px;
     margin: 0 26px 6px 16px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -523,7 +520,7 @@ MAIN COLONNE 2 */
     margin: 0 50px 7px 0
 }
 
-.card2 article {
+.containerCard2 {
     padding: 16px 22px 0 15px;
     min-width: 63%;
     display: flex;
@@ -532,7 +529,7 @@ MAIN COLONNE 2 */
 }
 
 .card2 p {
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -594,6 +591,7 @@ MAIN COLONNE 2 */
 }
 
 .card3 h4 {
+    margin: 0;
     padding: 0 19px 0 21px
 }
 
@@ -611,7 +609,7 @@ footer a {
     display: inline-block;
     text-decoration: none;
     margin: 0 0 12px 0;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -636,7 +634,7 @@ TABLETTE    */
 @media screen and (max-width:992px) {
 
     body {
-        padding: 0 20px
+        padding: 0 25px
     }
 
     .btnFilter {
@@ -678,7 +676,7 @@ TABLETTE    */
     }
 
     .card2 {
-        margin: 0 31px 48px 0;
+        margin: 0 20px 48px 0;
         min-width: 252px;
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1)
     }
@@ -694,23 +692,24 @@ TABLETTE    */
         line-height: 16px
     }
 
-    .card2 article {
+    .containerCard2 {
         padding: 12px 5px 0 10px
     }
 
     .card2 p {
+        margin: 7px 0 0 0;
         font-size: 13px;
         line-height: 15px
     }
 
     .card2 span {
-        margin: 0 26px 9px 0
+        margin: 0 26px 15px 0
     }
 
     /*
         BLOC ACTIVITY   */
     #activites h2 {
-        margin: 70px 0 0 0
+        margin: 70px 0 15px 0
     }
 
     .card3 {
@@ -741,7 +740,19 @@ TABLETTE    */
 SMARTPHONE    */
 @media screen and (max-width:768px) {
     body {
-        padding: 0 15px
+        padding: 0 20px
+    }
+
+    h3 {
+        margin: 0 0 13px 0
+    }
+
+    h5 {
+        margin: 0 0 36px 0
+    }
+
+    header>h4 {
+        margin: 0 0 430px 0
     }
 
     /*
@@ -793,15 +804,6 @@ SMARTPHONE    */
     #menu>ul>li:hover {
         border-bottom: 3px solid #0065FC
     }
-
-    h2 {
-        margin: 0 0 13px 0
-    }
-
-    h3 {
-        margin: 0 0 37px 0
-    }
-
 
     /*
     SEARCH      */
@@ -875,7 +877,17 @@ SMARTPHONE    */
     INFORMATIONS */
     #info {
         width: auto;
-        margin: 20px 0 14px 0
+        margin: 30px 0 6px 0;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #info>span:first-child {
+        position: relative;
+        bottom: 10px
+            /* align-items: flex-start; */
     }
 
 
@@ -893,13 +905,23 @@ SMARTPHONE    */
     /* 
     MAIN COLONNE 2 */
     #populaires {
-        padding: 40px 5px 1px 5px;
+        padding: 30px 5px 1px 5px;
         border-radius: 0;
         min-width: auto;
         width: 94%;
         margin: auto;
         flex-flow: column wrap;
         align-items: center
+    }
+
+    #populaires h2 {
+        margin: 0;
+        padding: 0 0 0 20px
+    }
+
+    #populaires>div:first-child i {
+        position: relative;
+        top: 0
     }
 
     #populaires>div:last-child {
@@ -936,6 +958,8 @@ SMARTPHONE    */
     }
 
     .card2 h4 {
+        padding: 0;
+        margin: 0;
         word-wrap: break-word;
         word-break: normal;
         font-weight: 700;
@@ -943,11 +967,11 @@ SMARTPHONE    */
         line-height: 19px
     }
 
-    .card2 article {
+    .containerCard2 {
         width: auto
     }
 
-    .card2 article div {
+    .containerCard2 div {
         word-wrap: break-word;
         word-break: normal;
         flex-flow: column wrap;
@@ -956,6 +980,7 @@ SMARTPHONE    */
     }
 
     .card2 p {
+        margin: 7px 0 0 0;
         word-wrap: break-word;
         word-break: normal;
         font-weight: 400;
@@ -964,7 +989,7 @@ SMARTPHONE    */
     }
 
     .card2 span {
-        margin: 0 26px 9px 0
+        margin: 0 26px 15px 0
     }
 
 
@@ -1062,6 +1087,6 @@ SMARTPHONE    */
     }
 
     footer>ul {
-        margin: 0 0 0 0
+        margin: 0
     }
 }
