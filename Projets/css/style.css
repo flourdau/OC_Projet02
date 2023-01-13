@@ -971,7 +971,7 @@ SMARTPHONE    */
         word-wrap: break-word;
         word-break: normal;
         flex-flow: column wrap;
-        width: 85%;
+        width: 75%;
         padding: 0 15px 0 0
     }
 
